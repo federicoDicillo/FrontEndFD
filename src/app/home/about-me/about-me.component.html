@@ -7,7 +7,7 @@
     </header>
     <main>
       <h1 class="info">Un poco sobre mi
-        <button  class="boto btn fa-solid fa-pen" routerLink="/editAboutme/{{sobremi.idAbout}}" *ngIf="isLogged"
+        <button  class="boto btn fa-solid fa-pen" routerLink='editAboutme/{{sobremi.idAbout}}' *ngIf="isLogged"
         ></button>
       </h1>
       <p class="info fs-5 col-md-8">{{sobremi.aboutText}}</p>

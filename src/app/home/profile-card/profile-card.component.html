@@ -2,7 +2,7 @@
     <div id="contenedorPerfil" class="container">
         <div id="info">
             <img id="profile-image" src="{{persona.imgProfile}}" alt="Foto de Perfil">
-            <button class="btn fa-solid fa-pen" routerLink="/editProfile/{{persona.id}}" *ngIf="isLogged"></button>
+            <button class="btn fa-solid fa-pen" routerLink='editProfile/{{persona.id}}' *ngIf="isLogged"></button>
         </div>
         <div class="info" id="info-data">
             <div>

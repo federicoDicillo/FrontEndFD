@@ -7,11 +7,11 @@ import { LoginComponent } from './login/login.component';
 import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
-  {path:"", component:HomeComponent},
-  {path:"login", component:LoginComponent},
-  {path:"home",redirectTo:"", pathMatch:"full"},
-  {path:"editAboutme/:id", component:EditAboutmeComponent},
-  {path:"editProfile/:id", component:EditProfileComponent},
+  {path:'', component:HomeComponent},
+  {path:'login', component:LoginComponent},
+  {path:'home',redirectTo:"", pathMatch:"full"},
+  {path:'editAboutme/:id', component:EditAboutmeComponent},
+  {path:'editProfile/:id', component:EditProfileComponent},
   
   {path:"**", component:Page404Component}
 ];

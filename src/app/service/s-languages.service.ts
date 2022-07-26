@@ -7,7 +7,7 @@ import { Idioma } from '../model/idioma';
   providedIn: 'root'
 })
 export class SLanguagesService {
-  idiomaURL = 'http://localhost:8080/idiomas/'
+  idiomaURL = 'https://portfolio-ap-back.herokuapp.com/idiomas/'
 
   constructor(private httpClient: HttpClient) { }
 

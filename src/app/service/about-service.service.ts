@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class AboutServiceService {
 
   constructor(private http: HttpClient) { }
-  aboutURL = 'https://portfolio-ap-back.herokuapp.com/#/sobremi/';
+  aboutURL = 'https://portfolio-ap-back.herokuapp.com/sobremi/';
 
 
   public listar(): Observable<Sobremi[]>{

@@ -12,7 +12,7 @@ export class PersonaService {
 
   constructor(private http: HttpClient) { }
 
-  URL = 'https://portfolio-ap-back.herokuapp.com/#/personas/';
+  URL = 'https://portfolio-ap-back.herokuapp.com/personas/';
 
   public listar(): Observable<persona[]>{
     return this.http.get<persona[]>(this.URL + 'listar');

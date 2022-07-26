@@ -1,0 +1,21 @@
+body{
+    margin-top: 10px;
+}
+.card{
+    border-radius: 18px;
+}
+.titulo{
+    font-weight: 700;
+}
+.otro{
+    color: gray;}
+ .boto{
+        padding-left: 15px;
+        float: right;
+        cursor: pointer;
+        background-color: transparent;
+        height: 10px;
+        width: 10px;
+        color: black;
+        font-size: 1.2em;
+}

@@ -1,0 +1,42 @@
+<div class="cuerpo container px-1">
+  <div class="row row-cols-2 row-cols-md-1 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <h5 class="card-title col">{{TituloSeccion}}</h5>
+            </div>
+            <div class="col">
+              <button (click)="getGuardarCambios()" *ngIf="isLogged" [hidden]="addPropiety"
+                class="boto btn fa-solid fa-circle-check"></button>
+              <button (click)="getAgregar()" *ngIf="isLogged" [hidden]="!addPropiety"
+                class="boto btn fa-solid fa-circle-plus"></button>
+            </div>
+          </div>
+          <form class="form-group col" [hidden]="addPropiety">
+            <div class="form-group col-md3">
+              <label for="tituloPuesto">Agregar una Habilidad:</label>
+              <input type="text" name="skill" class="form-control" [(ngModel)]="modSkill.unaSkill">
+            </div>
+            <div class="col">
+              <button type="submit" class="btn btn-primary" (click)="addSkill(modSkill)"
+                style="float: right; margin-top: 20px;">
+                Agregar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="container">
+          <div *ngFor="let skill of skills">
+            <button class="boto btn fa-solid fa-delete-left" *ngIf="isLogged"
+              (click)="deleteSkill(skill.idSkill)"></button>
+            <ul>
+              <li class="titulo">{{skill.unaSkill}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

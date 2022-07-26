@@ -1,0 +1,41 @@
+<body>
+<header class="header">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<div class="container container-fluid">
+  <a class="navbar-brand" href="#">
+    <img class="logo-ap" src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1648503444/APLogo-20-20.png" alt="logo arg programa">
+  </a>
+  <a id="yoprogramo" class="navbar-brand" aria-current="page" href="#" style="vertical-align: middle;">#YoProgramo</a>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+      <li class="nav-item active">
+        <a routerLink="" class="nav-link">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="bottompage">Contacto</a>
+      </li>
+    </ul>
+    <form class="d-flex" >
+      <a href="https://www.instagram.com/di.cillo.fede">
+        <i class="fa-brands fa-instagram fa-2x"></i>
+      </a>
+    </form>
+    <form class="d-flex">
+      <a href="https://www.linkedin.com/in/federico-di-cillo-773579233/">
+        <i class="fa-brands fa-linkedin fa-2x"></i>
+      </a>
+    </form>
+    <form class="d-flex">
+      <a href="https://github.com/federicoDicillo">
+        <i class="fa-brands fa-github fa-2x"></i>
+      </a>
+    </form>
+    <form class="d-flex">
+      <button (click)="loguearse()" class="btn btn-outline-light" *ngIf="!isLogged">Ingresar</button>
+      <button (click)="onLogout()" class="btn btn-outline-light" *ngIf="isLogged">Cerrar sesion</button>
+    </form>
+  </div>    
+</div>
+</nav>
+</header>
+</body>

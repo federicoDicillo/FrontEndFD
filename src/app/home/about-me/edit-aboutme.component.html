@@ -1,0 +1,21 @@
+<app-nav-bar></app-nav-bar>
+<div class="container" *ngIf="newAboutme isLogged">
+    <div class="row">
+        <div class="card h-100">
+            <div class="card-body">
+                <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
+                    <h5 class="card-title col">Por favor escriba una breve descripción:</h5>
+                  </header>
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm"  *ngIf="isLogged">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="aboutText" name="aboutText"
+                        [(ngModel)]="newAboutme.aboutText" required>
+                </div>
+                <button class="btn btn-primary">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>

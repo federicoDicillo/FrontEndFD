@@ -1,0 +1,51 @@
+<div class="cuerpo container px-1">
+  <div class="row row-cols-2 row-cols-md-1 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <h5 class="card-title col">{{TituloSeccion}}</h5>
+            </div>
+            <div class="col">
+              <button (click)="getGuardarCambios()" *ngIf="isLogged" [hidden]="addPropiety"
+                class="boto btn fa-solid fa-circle-check"></button>
+              <button (click)="getAgregar()" *ngIf="isLogged" [hidden]="!addPropiety"
+                class="boto btn fa-solid fa-circle-plus"></button>
+            </div>
+          </div>
+          <form class="form-group col" [hidden]="addPropiety" novalidate #f="ngForm">
+            <div class="form-group col-md3">
+              <label for="idioma">Idioma:</label>
+              <input type="text" id="idioma" name="idioma" class="form-control" [(ngModel)]="  modIdioma.idioma"
+                required>
+            </div>
+            <div class="form-group col-md3">
+              <label for="nivel">Nivel:</label>
+              <input type="text" id="nivel" name="nivel" class="form-control" [(ngModel)]="  modIdioma.nivelI" required>
+            </div>
+            <div class="col">
+              <button type="submit" class="btn btn-primary" style="float: right; margin-top: 20px;"
+                (click)="addIdioma(modIdioma)">Agregar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="container">
+          <div *ngFor="let language of idiomas">
+            <button class="boto btn fa-solid fa-delete-left" *ngIf="isLogged"
+              (click)="deleteIdioma(language.id)"></button>
+            <ul>
+              <li class="titulo">{{language.idioma}}</li>
+              <ul>
+                <li>Nivel: {{language.nivelI}}</li>
+              </ul>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

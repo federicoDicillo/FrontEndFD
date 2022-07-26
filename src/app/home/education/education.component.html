@@ -1,0 +1,66 @@
+<body>
+  <div class="container px-1">
+    <div class="row row-cols-2 row-cols-md-1 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <button (click)="getGuardarCambios()" *ngIf="isLogged" [hidden]="addPropiety"
+              class="boto btn fa-solid fa-circle-check"></button>
+            <button (click)="getAgregar()" *ngIf="isLogged" [hidden]="!addPropiety"
+              class="boto btn fa-solid fa-circle-plus"></button>
+            <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
+              <h5 class="card-title col">{{TituloSeccion}}</h5>
+            </header>
+            <div class="cuerpo container px-1">
+              <div class="row row-cols-2 row-cols-md-1 g-4">
+                <div class="col">
+                  <form class="form-group col" [hidden]="addPropiety">
+                    <div class="form-group col-md3">
+                      <label for="">Titulo</label>
+                      <input type="text" class="form-control" [(ngModel)]="modEstudio.titulo" name="titulo">
+                    </div>
+                    <div class="form-group col-md3">
+                      <label for="">Nivel</label>
+                      <input type="text" class="form-control" [(ngModel)]="modEstudio.nivel" name="nivel">
+                    </div>
+                    <div class="form-group col-md3">
+                      <label for="">Institución</label>
+                      <input type="text" class="form-control" [(ngModel)]="modEstudio.escuela" name="escuela">
+                    </div>
+                    <div class="form-group col-md3">
+                      <label for="">Localidad</label>
+                      <input type="text" class="form-control" [(ngModel)]="modEstudio.localidad" name="localidad">
+                    </div>
+                    <div class="form-group col-md3">
+                      <label for="">Año de ingreso y egreso:</label>
+                      <input type="text" class="form-control" [(ngModel)]="modEstudio.tiempo" name="tiempo">
+                    </div>
+                    <div class="col">
+                      <button type="submit" class="btn btn-primary" (click)="addEstudio(modEstudio)"
+                        style="float: right; margin-top: 20px;">
+                        Agregar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="container">
+            <div *ngFor="let est of estudios">
+              <button class="boto btn fa-solid fa-delete-left" *ngIf="isLogged"
+                (click)="deleteEstudio(est.idStudy)"></button>
+              <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
+                <div class="row">
+                  <div class="titulo">{{est.titulo}} - {{est.nivel}}</div>
+                  <div class="insti">{{est.escuela}} - {{est.localidad}}</div>
+                  <div class="otro">{{est.tiempo}}</div>
+                </div>
+              </header>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

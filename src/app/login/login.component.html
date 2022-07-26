@@ -1,0 +1,24 @@
+<app-nav-bar></app-nav-bar>
+
+<body class="text-center">
+  <main class="form-signin">
+    <p class="text-50 mb-5 text-white">Por favor, ingresar usuario y clave para continuar</p>
+
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="nobreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario"
+          required>
+        <label for="nobreUsuario" class="form-lavel">Usuario</label>
+        <span *ngIf="incorrecto">Ingrese un Usuario válido.</span>
+      </div>
+
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required>
+        <label for="password" class="form-lavel">Contraseña</label>
+        <span *ngIf="incorrecto">Ingrese una Contraseña válida.</span>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+    </form>
+  </main>
+</body>

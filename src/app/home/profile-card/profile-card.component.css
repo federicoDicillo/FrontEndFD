@@ -1,0 +1,63 @@
+.banner{
+    
+    background: url(https://www.xtrafondos.com/wallpapers/monte-fuji-y-ciudad-de-japon-7755.jpg) no-repeat center;
+   /* background: url(https://images.unsplash.com/photo-1518378379207-3418372afea3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80) no-repeat center;*/
+        background-size: cover;
+        min-height: 550px;
+        min-width: 100%;
+	    text-align: center;
+	    background-position: center center;
+	    background-size: cover;
+    	background-repeat: no-repeat;
+	    position: relative;
+        display: flex;
+        justify-content: center;  
+        align-items: center; 
+        box-shadow: 0px 20px  15px rgba(116, 125, 243, 0.733);
+}   
+
+.banner:before {
+    content:'';
+    position: absolute;
+        top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom,rgb(0, 0, 0), rgba(116, 125, 243, 0.205));
+    
+    
+}
+
+#contenedorPerfil{
+        position:absolute;
+        
+            
+}
+
+#profile-image {
+    width: 200px;
+	height: 200px;
+	object-fit: none;
+    border-radius: 150px; }
+
+.fa-pen{
+        position:absolute;
+            bottom:35%;
+            cursor: pointer;
+            background-color: transparent;
+            height: 50px;
+            width: 10px;
+            color: white;
+            font-size: 1.5em;
+    }
+
+
+div h1 {font-size: 50px;
+    color: #fff;
+	}
+div h2 {font-size: 40px;
+    color: #fff;
+	}
+div span {font-size: 25px;
+	color: #fff;
+	}

@@ -1,0 +1,16 @@
+body{
+    color:black;
+    background:gray ;
+    min-height: 100vh;
+}
+
+h1{
+    font-size: 80px;
+}
+p{
+    font-size: 50px;
+}
+
+.container{
+    padding-top: 40px;
+}

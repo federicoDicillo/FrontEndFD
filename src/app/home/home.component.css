@@ -1,0 +1,15 @@
+
+.footer{
+    background-color: #61678b;
+    width: 100%;
+}
+.container-fluid{
+    background-color:  #61678b;
+    box-shadow: 0px -10px  15px  #61678b;
+    margin-top: 30px;
+    height: 100%;
+}
+
+h5, span{
+    color: lightblue
+}

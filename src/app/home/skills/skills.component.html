@@ -31,9 +31,8 @@
           <div *ngFor="let skill of skills">
             <button class="boto btn fa-solid fa-delete-left" *ngIf="isLogged"
               (click)="deleteSkill(skill.idSkill)"></button>
-            <ul>
-              <li class="titulo">{{skill.unaSkill}}</li>
-            </ul>
+             <p class="titulo">{{skill.unaSkill}}</p> 
+         
           </div>
         </div>
       </div>

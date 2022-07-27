@@ -1,5 +1,5 @@
 <body>
-  <div class="container col-lg-10 mx-auto p-3">
+  <div class="container col-lg-15 mx-auto p-3">
     <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
       <a class="d-flex align-items-center text-dark text-decoration-none">
         <span class="fs-2" id="welcome">Bienvenidos a mi portfolio.</span>
@@ -10,7 +10,7 @@
         <button  class="boto btn fa-solid fa-pen" routerLink="/editAboutme/{{sobremi.idAbout}}" *ngIf="isLogged"
         ></button>
       </h1>
-      <p class="info fs-5 col-lg-10">{{sobremi.aboutText}}</p>
+      <p class="info text-break fs-5 col-lg-20">{{sobremi.aboutText}}</p>
 
     </main>
   </div>

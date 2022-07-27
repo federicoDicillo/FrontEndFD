@@ -27,11 +27,11 @@
           </form>
         </div>
 
-        <div class="container">
-          <div *ngFor="let skill of skills">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto" *ngFor="let skill of skills">
             <button class="boto btn fa-solid fa-delete-left" *ngIf="isLogged"
               (click)="deleteSkill(skill.idSkill)"></button>
-             <span class="titulo">{{skill.unaSkill}} </span>
+             <span class="skill">{{skill.unaSkill}} </span>
           </div>
         </div>
       </div>

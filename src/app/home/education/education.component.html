@@ -50,6 +50,8 @@
             <div *ngFor="let est of estudios">
               <button class="boto btn fa-solid fa-delete-left" *ngIf="isLogged"
                 (click)="deleteEstudio(est.idStudy)"></button>
+              <button class="boto btn fa-solid fa-pen" routerLink="/editEducation/{{est.idStudy}}"
+                *ngIf="isLogged"></button>
               <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
                 <div class="row">
                   <div class="titulo">{{est.titulo}} - {{est.nivel}}</div>

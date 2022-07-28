@@ -30,8 +30,10 @@
 
           <div class="container">
             <div *ngFor="let proy of proyectos">
-              <button class="boto btn fa-solid fa-delete-left" *ngIf="isLogged" (click)=" deleteProy(proy.idProy)"></button>
-              <button class="boto btn fa-solid fa-pen" routerLink="/editProy/{{proy.idProy}}" *ngIf="isLogged"></button>
+              <button class="boto btn fa-solid fa-delete-left" *ngIf="isLogged"
+                (click)=" deleteProy(proy.idProy)"></button>
+              <button class="boto btn fa-solid fa-pen" routerLink="/editProyec/{{proy.idProy}}"
+                *ngIf="isLogged"></button>
               <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
                 <div class="row">
                   <div class="titulo">{{proy.nameProy}}</div>

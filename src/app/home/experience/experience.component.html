@@ -1,59 +1,62 @@
 <body>
   <div class="container px-1">
-  <div class="row row-cols-2 row-cols-md-1 g-4">
-  <div class="col">
-  <div class="card h-100">
-    <div class="card-body">
-    <button (click)="getGuardarCambios()" class="boto btn fa-solid fa-circle-check"  *ngIf="isLogged" [hidden]="addPropiety"></button>
-    <button (click)="getAgregar()" class="boto btn fa-solid fa-circle-plus"  *ngIf="isLogged" [hidden]="!addPropiety" ></button> 
-    <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
-      <h5 class="card-title col">{{TituloSeccion}}</h5>
-    </header>
-    <div class="cuerpo container px-1">
-      <div class="row row-cols-2 row-cols-md-1 g-4">
-      <div class="col">     
-        <form class="form-group col" [hidden]="addPropiety">
-          <div class="form-group col-md3">
-            <label for="">Titulo</label>
-            <input type="text"  class="form-control" [(ngModel)]="modExp.puesto" name="puesto">
-          </div>
-          <div class="form-group col-md3">
-            <label for="">Empresa</label>
-            <input type="text"  class="form-control" [(ngModel)]="modExp.empresa" name="empresa">
-          </div>
-          <div class="form-group col-md3">
-            <label for="">Contacto</label>
-            <input type="text" class="form-control" [(ngModel)]="modExp.contacto" name="contacto">
-          </div>
-          <div class="form-group col-md3">
-            <label for="">Duración</label>
-            <input type="text" class="form-control" [(ngModel)]="modExp.tiempo" name="tiempo">
-          </div>
-            <div class="col">
-            <button type="submit" class="btn btn-primary" (click)="addExp(modExp)"  style="float: right; margin-top: 20px;">
-                  Agregar</button>
-          </div>
-        </form>
-        </div>
-        </div>
-        </div>
-      
-      </div>
-        <div class="container">      
-          <div *ngFor="let exp of experiencias">
-            <button class="boto btn fa-solid fa-delete-left"  *ngIf="isLogged" (click)="deleteExp(exp.idExp)"></button>
+    <div class="row row-cols-2 row-cols-md-1 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <button (click)="getGuardarCambios()" class="boto btn fa-solid fa-circle-check" *ngIf="isLogged"
+              [hidden]="addPropiety"></button>
+            <button (click)="getAgregar()" class="boto btn fa-solid fa-circle-plus" *ngIf="isLogged"
+              [hidden]="!addPropiety"></button>
             <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
-              <div  class="row">
-                <div class="titulo">{{exp.puesto}}</div>
-                <div class="insti">{{exp.empresa}} - {{exp.contacto}}</div>  
-                <div class="otro">{{exp.tiempo}}</div>
+              <h5 class="card-title col">{{TituloSeccion}}</h5>
+            </header>
+            <div class="cuerpo container px-1">
+              <div class="row row-cols-2 row-cols-md-1 g-4">
+                <div class="col">
+                  <form class="form-group col" [hidden]="addPropiety">
+                    <div class="form-group col-md3">
+                      <label for="">Titulo</label>
+                      <input type="text" class="form-control" [(ngModel)]="modExp.puesto" name="puesto">
+                    </div>
+                    <div class="form-group col-md3">
+                      <label for="">Empresa</label>
+                      <input type="text" class="form-control" [(ngModel)]="modExp.empresa" name="empresa">
+                    </div>
+                    <div class="form-group col-md3">
+                      <label for="">Contacto</label>
+                      <input type="text" class="form-control" [(ngModel)]="modExp.contacto" name="contacto">
+                    </div>
+                    <div class="form-group col-md3">
+                      <label for="">Duración</label>
+                      <input type="text" class="form-control" [(ngModel)]="modExp.tiempo" name="tiempo">
+                    </div>
+                    <div class="col">
+                      <button type="submit" class="btn btn-primary" (click)="addExp(modExp)"
+                        style="float: right; margin-top: 20px;">
+                        Agregar</button>
+                    </div>
+                  </form>
+                </div>
               </div>
-            </header>     
+            </div>
+
+          </div>
+          <div class="container">
+            <div *ngFor="let exp of experiencias">
+              <button class="boto btn fa-solid fa-delete-left" *ngIf="isLogged" (click)="deleteExp(exp.idExp)"></button>
+              <button class="boto btn fa-solid fa-pen" routerLink="/editExplab/{{exp.idExp}}" *ngIf="isLogged"></button>
+              <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
+                <div class="row">
+                  <div class="titulo">{{exp.puesto}}</div>
+                  <div class="insti">{{exp.empresa}} - {{exp.contacto}}</div>
+                  <div class="otro">{{exp.tiempo}}</div>
+                </div>
+              </header>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      </div>
-      </div>
-  </body>
-  
+    </div>
+  </div>
+</body>

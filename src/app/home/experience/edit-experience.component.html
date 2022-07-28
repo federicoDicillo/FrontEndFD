@@ -1,0 +1,38 @@
+<app-nav-bar></app-nav-bar>
+<div class="container" >
+    <div class="row">
+        <div class="card h-100">
+            <div class="card-body">
+                <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
+                    <h5 class="card-title col">Editar Perfil</h5>
+                  </header>
+        <div>
+            <form  (ngSubmit)="onUpdate()" novalidate #f="ngForm" *ngIf="isLogged">
+                <div class="col form-group">
+                    <label for="puesto">información del puesto:</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto"
+                        [(ngModel)]="editExp.puesto" required>
+                </div>
+                <div class="form-group">
+                    <label for="empresa">Empresa:</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa"
+                        [(ngModel)]="editExp.empresa" required>
+                </div>
+                <div class="form-group">
+                    <label for="contacto">Contacto de la empresa:</label>
+                    <input type="text" class="form-control" id="contacto" name="contacto"
+                        [(ngModel)]="editExp.contacto" required>
+                </div>
+                <div class="form-group">
+                    <label for="tiempo">Tiempo de duración:</label>
+                    <input type="text" class="form-control" id="tiempo" name="tiempo"
+                        [(ngModel)]="editExp.tiempo" required>
+                </div>
+                <button class="btn btn-primary">Actualizar</button>
+            </form>
+            <button routerLink="" class="btn btn-danger">Cancelar</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>

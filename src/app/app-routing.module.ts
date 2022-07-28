@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EditAboutmeComponent } from './home/about-me/edit-aboutme.component';
 import { HomeComponent } from './home/home.component';
 import { EditProfileComponent } from './home/profile-card/edit-profile.component';
+import { EditProyectsComponent } from './home/proyects/edit-proyects.component';
 import { LoginComponent } from './login/login.component';
 import { Page404Component } from './page404/page404.component';
 
@@ -12,7 +13,9 @@ const routes: Routes = [
   {path:'home',redirectTo:"", pathMatch:"full"},
   {path:'editAboutme/:id', component:EditAboutmeComponent},
   {path:'editProfile/:id', component:EditProfileComponent},
-  
+  {path:'editProy/:id', component:EditProyectsComponent},
+
+
   {path:"**", component:Page404Component}
 ];
 

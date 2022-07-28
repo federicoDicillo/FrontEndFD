@@ -20,6 +20,7 @@ import { PersonaService } from '../app/service/persona.service';
 import { interceptorProvider } from './service/interceptor-service';
 import { EditAboutmeComponent } from './home/about-me/edit-aboutme.component';
 import { EditProfileComponent } from './home/profile-card/edit-profile.component';
+import { EditProyectsComponent } from './home/proyects/edit-proyects.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EditProfileComponent } from './home/profile-card/edit-profile.component
     Page404Component,
     LanguagesComponent,
     EditAboutmeComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    EditProyectsComponent
   ],
   imports: [
     BrowserModule,

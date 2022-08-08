@@ -15,7 +15,7 @@ export class EducationComponent implements OnInit {
   TituloSeccion = "Estudios"
 
 
-  modEstudio = new Estudio("", "", "", "", "");
+  modEstudio = new Estudio("", "", "", "");
   estudios: Estudio[] = [];
 
 

@@ -15,7 +15,7 @@ export class ExperienceComponent implements OnInit {
   TituloSeccion = "Experiencia"
 
 
-  modExp = new Experiencia("", "", "", "");
+  modExp = new Experiencia("", "", "");
   experiencias: Experiencia[] = [];
 
   constructor(private sExp: SExperienceService, private tokenService: TokenService, private router: Router) { }

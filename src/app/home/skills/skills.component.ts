@@ -43,6 +43,7 @@ addSkill(skill:Skill){
     alert("Falló.");
     this.router.navigate(['']);
   })
+ 
 }
 
 deleteSkill(id?: number){

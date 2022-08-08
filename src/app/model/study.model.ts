@@ -4,10 +4,8 @@ export class Estudio {
     escuela: String;
     tiempo: String;
     nivel: String;
-    localidad: String
 
-    constructor(titulo:String, escuela:String, tiempo:String, nivel:String, localidad: String){
-        this.localidad = localidad;
+    constructor(titulo:String, escuela:String, tiempo:String, nivel:String){
         this.titulo = titulo;
         this.escuela = escuela;
         this.tiempo = tiempo;

@@ -16,16 +16,12 @@
                 <div class="col">
                   <form class="form-group col" [hidden]="addPropiety">
                     <div class="form-group col-md3">
-                      <label for="">Titulo</label>
+                      <label for="">Información del puesto</label>
                       <input type="text" class="form-control" [(ngModel)]="modExp.puesto" name="puesto">
                     </div>
                     <div class="form-group col-md3">
                       <label for="">Empresa</label>
                       <input type="text" class="form-control" [(ngModel)]="modExp.empresa" name="empresa">
-                    </div>
-                    <div class="form-group col-md3">
-                      <label for="">Contacto</label>
-                      <input type="text" class="form-control" [(ngModel)]="modExp.contacto" name="contacto">
                     </div>
                     <div class="form-group col-md3">
                       <label for="">Duración</label>
@@ -49,7 +45,7 @@
               <header class="d-flex align-items-center pb-2 mb-2 border-bottom">
                 <div class="row">
                   <div class="titulo">{{exp.puesto}}</div>
-                  <div class="insti">{{exp.empresa}} - {{exp.contacto}}</div>
+                  <div class="insti">{{exp.empresa}}</div>
                   <div class="otro">{{exp.tiempo}}</div>
                 </div>
               </header>
